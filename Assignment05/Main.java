@@ -9,6 +9,7 @@ functionalities in their own class in their own way
  */
 public class Main {
     public static void main(String[] args) {
+        //nEW LINE INSIDE MAIN FUNCTION
         Bicycle bicycle1 = new Bicycle();
         bicycle1.gearChange(2);
         bicycle1.speedUp(10);
