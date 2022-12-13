@@ -4,12 +4,7 @@ import java.util.Scanner;
 Design and develop a context for given case study and implement an interface for Vehicles
 Consider the example of vehicles like bicycle, car and bike. All Vehicles have common
 functionalities such as Gear Change, Speed up and apply breaks. Make an interface and put all
-these common functionalities. Bicycle, Bike, Car classes should be implemented for all these
-functionalities in their own class in their own way
-
- */
-public class Main {
-    public static void main(String[] args) {
+these common functionalities. Bi{
         int flag = 0;
         Scanner sc = new Scanner(System.in);
         while(flag != -1){
@@ -44,5 +39,12 @@ public class Main {
             System.out.println("Press -1 to Exit and press any other number to continue");
             flag = sc.nextInt();
         }
+    }cycle, Bike, Car classes should be implemented for all these
+functionalities in their own class in their own way
+
+ */
+public class Main {
+    public static void main(String[] args) {
+
     }
 }
