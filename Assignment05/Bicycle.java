@@ -7,10 +7,10 @@ public class Bicycle implements Vehicle{
 
     @Override
     public void gearChange(int a) {
-       if(a>0)
-           gear= a;
-       else
-           System.out.println("Gears can't be negative");
+        if(a>0)
+            gear= a;
+        else
+            System.out.println("Gears can't be negative");
     }
 
     @Override
