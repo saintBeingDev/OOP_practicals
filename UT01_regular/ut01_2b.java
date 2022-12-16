@@ -5,13 +5,24 @@ import java.util.Scanner;
 class box{
     private int width, height, depth;
     Scanner sc = new Scanner(System.in);
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setDepth(int depth) {
+        this.depth = depth;
+    }
+
+
     public void getDimensions(){
-        System.out.println("Enter Width:");
-        this.width = sc.nextInt();
-        System.out.println("Enter height:");
-        this.height = sc.nextInt();
-        System.out.println("Enter depth:");
-        this.depth = sc.nextInt();
+        setWidth(10);
+        setHeight(20);
+        setDepth(5);
     }
     public int calculateVolume(){
         return (this.depth*this.width*this.height);
