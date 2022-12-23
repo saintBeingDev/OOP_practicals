@@ -21,6 +21,10 @@ public class Database {
         createNewFile();
 //        clearFile();
     }
+
+//    BufferedReader will be used for reading from file
+//    FileWriter will be used for writing into file
+
     public void createNewFile() {
         fl =new File("Assignment08/data.txt");;
         if (!fl.exists()){
@@ -133,7 +137,10 @@ public class Database {
     }
 
     public void deleteRecord() throws IOException{
-//        You should create a temporary file in which you write the data. After that, you can delete the original file, then rename the temporary file to the original.
+        // You should create a temporary file in which you write the data. After that, you can delete the original file, then   rename the temporary file to the original.
+        // write everything in temp file except the record to be deleted
+        // delete old file and rename temp file to original
+        // do this last step in finally block
         fl = new File("Assignment08/data.txt");
         File tempFile = new File("Assignment08/temp.txt");
 
