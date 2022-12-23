@@ -10,7 +10,7 @@ public class Employee{
         String address;
         Scanner s = new Scanner(System.in);
         double BP;
- double DA;
+         double DA;
          double HRA;
          double PF;
          double staffclubfund;
@@ -36,15 +36,15 @@ public class Employee{
          }
          void displayemployeedeatils()
          {
-         System.out.println("""
-                 ======================================
-                 EMPLOYEE DETAILS
-                 ======================================""");
-         System.out.println("Employee Name: "+name);
-         System.out.println("Email ID: "+mailId);
-         System.out.println("Contact Number: "+num);
-         System.out.println("Employee ID: "+employeeId);
-         System.out.println("Address: "+address);
+                 System.out.println("""
+                         ======================================
+                         EMPLOYEE DETAILS
+                         ======================================""");
+                 System.out.println("Employee Name: "+name);
+                 System.out.println("Email ID: "+mailId);
+                 System.out.println("Contact Number: "+num);
+                 System.out.println("Employee ID: "+employeeId);
+                 System.out.println("Address: "+address);
          }
          }
 
