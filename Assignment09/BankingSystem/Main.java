@@ -1,54 +1,76 @@
-//package Assignment09;
-//
-//import java.util.Scanner;
-//
-//public class Main{
-//    public static void main(String[] args){
-//        Scanner sc=new Scanner(System.in);  //creating object of scanner class
-//        SavingsAccount a; //cresting object of SavingsAccount class
-//        Bank bm=new Bank(); //cresting object of Bank class
-//
-//        do{
-//            //menu driven program
-//            System.out.println("\n\t1.Create Account\n\t2.Display Account\n\t3.Check Balance"
-//                    + "\n\t4.Deposit Amount\n\t5.Withdraw Amount\n\t6.Exit");
-//            System.out.print("Enter your choice: ");  //printing on console
-//            int choice=sc.nextInt();   //taking input from user
-//            System.out.println("");
-//            switch(choice)      //switch case
-//            {
-//                case 1:
-//                    a=bm.createAccount();    //calling createAccount method
-//                    System.out.println("=================================================");
-//                    break;
-//                case 2:
-//                    bm.displayAccountInformation();  //calling displayAccountInformation method
-//                    System.out.println("=================================================");
-//                    break;
-//                case 3:
-//                    bm.checkBalance();   //calling checkBalance method
-//                    System.out.println("=================================================");
-//                    break;
-//                case 4:
-//                    System.out.print("Enter the amount you want to deposit: ");
-//                    double amount=sc.nextDouble();
-//                    bm.depositAmount(amount);       //calling depositAmount method
-//                    System.out.println("=================================================");
-//                    break;
-//                case 5:
-//                    bm.getWithdrawAmount();          //calling getWithdrawAmount method
-//                    System.out.println("=================================================");
-//                    break;
-//                case 6:
-//                    System.out.println("=================================================");
-//                    return ; //stop execution of program
-//                default:
-//                    System.out.println("INVALID INPUT !!");//printing invalid input
-//                    System.out.println("=================================================");
-//                    break;
-//            }
-//
-//        }while(true);
-//    }
-//}
-//
+package Assignment09.BankingSystem;
+
+
+import java.util.Scanner;
+
+// 1. Create an account
+// 2. Deposit money
+// 3. Withdraw money
+// 4. Honor daily withdrawal limit
+// 5. Check the balance
+// 6. Display Account information
+
+/**
+ * Things to remember: Withdraw money formula else part has break
+ * 2. Daily withdrawal limit is inside main
+ * */
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Account ac = new Account();
+        System.out.println("--------------------------------------------");
+        System.out.println("WELCOME TO BANK OF MAHARASHTRA");
+        System.out.println("--------------------------------------------");
+
+
+        boolean flag = true;
+        int dailyWithdrawalLimit =0;
+        do{
+            System.out.println("""
+                    ===============MENU====================
+                    1.Create account
+                    2.Deposit money
+                    3.Withdraw money
+                    4.Check Balance
+                    5.Display Account information
+                    0.Exit
+                    ======================================""");
+            System.out.print("Enter your choice: ");
+            int choice = sc.nextInt();
+
+            switch(choice){
+                case 1->{
+                    ac.createAccount();
+                }
+                case 2->{
+                    ac.deposit();
+                }
+                case 3->{
+                    dailyWithdrawalLimit++;
+                    if(dailyWithdrawalLimit>2){
+                        System.out.println("**********************************************");
+                        System.out.println("You can only withdraw money 2 times a day");
+                        System.out.println("**********************************************");
+                        System.out.println("**********************************************");
+                        break;
+                    }
+                    ac.withDrawMoney();
+                }
+                case 4->{
+                    System.out.println("----------------------------------------------------");
+                    System.out.println("Balance: "+ ac.getBalance());
+                    System.out.println("----------------------------------------------------");
+                }
+                case 5->{
+                    ac.showDetails();
+                }
+                case 0->{
+                    flag = false;
+                }
+                default -> {
+                    System.out.println("Thanks for using our services...");
+                }
+            }
+        }while(flag);
+    }
+}
