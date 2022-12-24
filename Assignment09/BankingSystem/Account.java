@@ -1,4 +1,4 @@
-package Assignment09;
+package Assignment09.BankingSystem;
 
 abstract class Account { //creating abstract class account
     protected double balance; //declaration of balance

@@ -1,4 +1,4 @@
-package Assignment09;
+package Assignment09.BankingSystem;
 
 public class SavingAccount extends Account{
     //inheriting Account class in SavingAccount

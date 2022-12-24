@@ -1,4 +1,4 @@
-package Assignment09;
+package Assignment09.BankingSystem;
 
 public class Customer {
     private String customerName;   //declaration of customerName
