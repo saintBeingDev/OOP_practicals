@@ -44,17 +44,17 @@ public class PaymentService {
             choice = sc.nextInt();
             switch (choice){
                 case 1->{
-                    PaymentByCreditCard payByCard = new PaymentByCreditCard();
+                    PaymentStrategy payByCard = new PaymentByCreditCard();
                     payByCard.collectPaymentDetails();
                     payByCard.pay(amount);
                 }
                 case 2->{
-                    PaymentByPayPal paybyPal = new PaymentByPayPal();
+                    PaymentStrategy paybyPal = new PaymentByPayPal();
                     paybyPal.collectPaymentDetails();
                     paybyPal.pay(amount);
                 }
                 case 3->{
-                    PaymentByBitcoin payByBitcoin = new PaymentByBitcoin();
+                    PaymentStrategy payByBitcoin = new PaymentByBitcoin();
                     payByBitcoin.collectPaymentDetails();
                     payByBitcoin.pay(amount);
                 }

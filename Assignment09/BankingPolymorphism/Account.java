@@ -1,10 +1,9 @@
-package Assignment09.BankingSystem;
+package Assignment09.BankingPolymorphism;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Account {
+public abstract class Account {
     Scanner sc = new Scanner(System.in);
     Scanner sc_str = new Scanner(System.in);
     private String name;
@@ -55,7 +54,7 @@ public class Account {
     }
 
     // Methods
-    public void createAccount(){
+    public  void createAccount(){
         System.out.println("-------------------------------------------------");
         System.out.println("CREATING ACCOUNT");
         System.out.println("-------------------------------------------------");
