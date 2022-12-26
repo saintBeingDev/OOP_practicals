@@ -24,18 +24,18 @@ public class Main {
                             ===============
                             RECTANGLE AREA CALCULATOR
                             ===============""");
-                    Rectangle r = new Rectangle();
-                    r.setDimension();
-                    r.compute_area();
+                    shape s = new Rectangle();
+                    s.setDimension();
+                    s.compute_area();
                 }
                 case 2 -> {
                     System.out.println("""
                             ===============
                             TRIANGLE AREA CALCULATOR
                             ===============""");
-                    Triangle t = new Triangle();
-                    t.setDimension();
-                    t.compute_area();
+                    shape s = new Triangle();
+                    s.setDimension();
+                    s.compute_area();
                 }
                 default -> System.out.println("Please enter a valid input.");
             }

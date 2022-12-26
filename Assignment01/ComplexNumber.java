@@ -1,5 +1,7 @@
 package Assignment01;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ComplexNumber {
     float real, img;
     ComplexNumber(){}
@@ -30,7 +32,7 @@ public class ComplexNumber {
     ComplexNumber div(ComplexNumber n2){
         ComplexNumber result = new ComplexNumber();
         result.real = ((this.real * n2.real ) + (this.real * n2.img))/ (n2.real * n2.real + n2.img * n2.img);
-        result.img = ((this.real * n2.img) - (this.img * n2.real) )/ (n2.real * n2.real + n2.img * n2.img);
+        result.img = ((this.img * n2.real) - (this.real * n2.img))/ (n2.real * n2.real + n2.img * n2.img);
         return result;
     }
 

@@ -1,14 +1,12 @@
-package Assignment10;
+package Practice.Assign10;
 
 public class Sedan extends Car{
-    public Sedan() {
+    Sedan() {
         super(CarType.SEDAN);
-        construct();
     }
 
     @Override
     protected void construct() {
-        System.out.println("\nBuilding SEDAN car");
+        System.out.printf("Building car: %s", super.getModel());
     }
-
 }

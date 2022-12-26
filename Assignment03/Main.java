@@ -2,48 +2,56 @@ package Assignment03;
 
 import java.util.Scanner;
 
+//Design and develop inheritance for a given case study, identify objects and relationships and
+//        implement inheritance wherever applicable. Employee class hasEmp_name, Emp_id, Address Mail_id, and Mobile_noas members. Inherit the classes: Programmer, Team Lead, Assistant Project
+//        Manager and Project Manager from employee class. Add Basic Pay (BP) as the member of all the
+//        inherited classes with 97% of BP as DA, 10 % of BP as HRA, 12% of BP as PF, 0.1% of BP for staff
+//        club fund. Generate pay slips for the employees with their gross and net salary
 public class Main {
-    public static void main (String[] args)
-    {
-        int flag=0;
-        while(flag!=-1)
-        {
-            System.out.println("Enter 1 if the employee's designation is Programmer.");
-            System.out.println("Enter 2 if the employee's designation is Team Lead.");
-            System.out.println("Enter 3 if the employee's designation is Assistant Product Manager.");
-            System.out.println("Enter 4 if the employee's designation is Product Manager.");
-            System.out.println("Enter the number corresponding to the designation: ");
-            Scanner get = new Scanner(System.in);
-            int x = get.nextInt();
-            switch (x) {
-                case 1 -> {
-                    Programmer ob1 = new Programmer();
-                    ob1.hello1();
-                    ob1.displayemployeedeatils();
-                    ob1.display();
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+
+
+        boolean flag = true;
+        do{
+            System.out.println("""
+                    1.Programmer
+                    2.TeamLead
+                    3.Assistant project manger
+                    4.Project Manager""");
+            int ch = sc.nextInt();
+            switch (ch){
+                case 1->{
+                    System.out.print("Enter basic salary for programmer");
+                    double sal = sc.nextDouble();
+                    Programmer p = new Programmer(sal);
+                    p.salary();
                 }
-                case 2 -> {
-                    TeamLead ob2 = new TeamLead();
-                    ob2.hello2();
-                    ob2.displayemployeedeatils();
-                    ob2.display();
+                case 2->{
+                    System.out.print("Enter basic salary for team lead");
+                    double sal = sc.nextDouble();
+                    TeamLead p = new TeamLead(sal);
+                    p.salary();
                 }
-                case 3 -> {
-                    AsstProductManager ob3 = new AsstProductManager();
-                    ob3.hello3();
-                    ob3.displayemployeedeatils();
-                    ob3.display();
+                case 3->{
+                    System.out.print("Enter basic salary for assistant project manager");
+                    double sal = sc.nextDouble();
+                    APM p = new APM(sal);
+                    p.salary();
                 }
-                case 4 -> {
-                    ProductManager ob4 = new ProductManager();
-                    ob4.hello4();
-                    ob4.displayemployeedeatils();
-                    ob4.display();
+                case 4->{
+                    System.out.print("Enter basic salary for project manager");
+                    double sal = sc.nextDouble();
+                    ProjectManager p = new ProjectManager(sal);
+                    p.salary();
                 }
-                default -> System.out.println("Please enter a valid number.");
+                default -> {
+                    System.out.println("Enter valid choice");
+                }
             }
-            System.out.println("\n -1 to exit and for any other input continue.");
-            flag = get.nextInt();
-        }
+            System.out.println("Do you want to continue:[y/n]");
+            char c = sc.next().charAt(0);
+            if(c == 'n' || c == 'N') flag = false;
+        }while(flag);
     }
 }

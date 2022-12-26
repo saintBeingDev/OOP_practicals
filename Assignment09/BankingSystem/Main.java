@@ -22,7 +22,6 @@ public class Main {
         System.out.println("WELCOME TO BANK OF MAHARASHTRA");
         System.out.println("--------------------------------------------");
 
-
         boolean flag = true;
         int dailyWithdrawalLimit =0;
         do{

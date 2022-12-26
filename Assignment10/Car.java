@@ -1,6 +1,7 @@
 package Assignment10;
 
 public abstract class Car {
+    private CarType model = null;
     public Car(CarType model) {
         this.model = model;
         arrangeParts();
@@ -15,7 +16,6 @@ public abstract class Car {
     // Do subclass level processing in this method
     protected abstract void construct();
 
-    private CarType model = null;
 
     public CarType getModel() {
         return model;

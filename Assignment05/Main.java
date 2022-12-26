@@ -12,7 +12,7 @@ functionalities in their own class in their own way
  */
 public class Main {
     public static void main(String[] args) {
-        //nEW LINE INSIDE MAIN FUNCTION
+        //NEW LINE INSIDE MAIN FUNCTION
         Scanner sc = new Scanner(System.in);
         boolean flag = true;
         while(flag){
@@ -25,7 +25,7 @@ public class Main {
             int n = sc.nextInt();
             switch (n){
                 case 1->{
-                    Bicycle bicycle1 = new Bicycle();
+                    Vehicle bicycle1 = new Bicycle();
                     bicycle1.gearChange(2);
                     bicycle1.speedUp(10);
                     bicycle1.applyBreak(5);
@@ -33,16 +33,15 @@ public class Main {
                     System.out.println("-----------------------------------------");
                 }
                 case 2->{
-                    Car car1 = new Car();
+                    Vehicle car1 = new Car();
                     car1.display();
                     car1.gearChange(3);
                     car1.speedUp(20);
                     car1.applyBreak(10);
-
                     System.out.println("-----------------------------------------");
                 }
                 case 3->{
-                    Bike bike1 = new Bike() ;
+                    Vehicle bike1 = new Bike() ;
                     bike1.display();
                     bike1.gearChange(3);
                     bike1.speedUp(20);

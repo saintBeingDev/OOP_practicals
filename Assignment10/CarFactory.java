@@ -16,7 +16,6 @@ public class CarFactory {
                 car = new Sedan();
             }
         }
-
     return car;
     }
 }

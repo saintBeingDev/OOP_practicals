@@ -12,8 +12,7 @@ public class Main {
                 break;
             }
         }
-        if(flag == 0)return true;
-        return false;
+        return flag == 0;
     }
     public static <T> void count(String type, ArrayList<T> element){
         int even = 0, odd =0, prime = 0, palin =0;
